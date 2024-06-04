@@ -14,14 +14,6 @@ export default function Home() {
     }[]
   >([]);
 
-  useEffect(() => {
-    // Load chat from localStorage on client-side only
-    const savedChat = ls.getFromLs("chat");
-    if (savedChat) {
-      setChat(savedChat);
-    }
-  }, []); // Run only on component mount (client-side)
-
   const handleSubmit = async () => {
     if (!input.trim()) return;
 
